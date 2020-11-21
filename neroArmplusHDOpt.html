@@ -13362,7 +13362,7 @@ div#notebook {
     <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Workspace (Top View)&#39;</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Planar Structural Link Length &#39;</span><span class="o">+</span><span class="n">one</span> <span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Dexterity_ratio &#39;</span><span class="o">+</span><span class="n">two</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Singularity_ratio &#39;</span><span class="o">+</span><span class="n">three</span><span class="p">)</span>
     <span class="c1">#print(&quot;Dexterity_ratio = %.3f&quot; % Dexterity_ratio)</span>
     <span class="c1">#print(&quot;Singularity_ratio = %.3f&quot; % Singularity_ratio)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="c1">#print(&quot;\n&quot;)</span>
  
     <span class="c1">#fig.savefig(&#39;neuroArmPLUSHD_Prototype_Optimization.pdf&#39;)</span>
 </pre></div>
@@ -13473,7 +13473,10 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
-<span class="n">interact</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">Length_of_First_Link</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.28</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span><span class="n">Length_of_Second_Link</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span><span class="n">Theta2_Range</span> <span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">63</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span><span class="n">Theta3_Range</span> <span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">105</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="nd">@widgets</span><span class="o">.</span><span class="n">interact</span>
+<span class="k">def</span> <span class="nf">wrapped_interactive_dummy_func</span><span class="p">():</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;description_width&#39;</span><span class="p">:</span> <span class="s1">&#39;initial&#39;</span><span class="p">}</span>
+        <span class="n">widgets</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">Length_of_First_Link</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mf">0.28</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Length_of_First_Link&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">),</span>         <span class="n">Length_of_Second_Link</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Length_of_Second_Link&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">),</span>         <span class="n">Theta2_Range</span> <span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">63</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Theta2_Range&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">),</span>         <span class="n">Theta3_Range</span> <span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">105</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Theta3_Range&quot;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="n">style</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13498,35 +13501,6 @@ div#notebook {
 
 </div>
 
-<div class="output_area">
-
-    
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;function __main__.test(Length_of_First_Link, Length_of_Second_Link, Theta2_Range, Theta3_Range)&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-  </div>
-
-  
-
-  <div class="
-      cell border-box-sizing code_cell rendered">
-    <div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
